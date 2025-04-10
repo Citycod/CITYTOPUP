@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityTopUp - SIGNUP</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --transition-speed: 0.4s;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .registration-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .registration-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .form-image {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+        
+        .form-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .btn-register {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .btn-register:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .social-btn {
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Floating animation */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating-text {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        /* Fade-in animation */
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Checkbox animation */
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .form-check-input {
+            transition: all var(--transition-speed) ease;
+        }
+        
+        /* Link hover effect */
+        .link-hover {
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .link-hover:hover {
+            color: var(--primary-color) !important;
+            transform: translateX(3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Registration Section with Animations -->
+    <section class="p-3 p-md-4 p-xl-5 animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="registration-card card border-light-subtle shadow-sm">
+                <div class="row g-0">
+                    <div class="col-12 col-md-6">
+                        <img class="form-image img-fluid rounded-start w-100 h-100 object-fit-cover" 
+                             loading="lazy" 
+                             src="/comic-book-lifestyle-scene-illustration.jpg" 
+                             alt="CityTopUp Registration">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card-body p-3 p-md-4 p-xl-5">
+                            <div class="row animate-fade-in" style="animation-delay: 0.2s;">
+                                <div class="col-12">
+                                    <div class="mb-5">
+                                        <h2 class="h3 floating-text">Create Account</h2>
+                                        <h3 class="fs-6 fw-normal text-secondary m-0">Join CityTopUp today</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form action="#!">
+                                <div class="row gy-3 gy-md-4 overflow-hidden">
+                                    <!-- Name Fields -->
+                                    <div class="col-12 animate-fade-in" style="animation-delay: 0.3s;">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Email Field -->
+                                    <div class="col-12 animate-fade-in" style="animation-delay: 0.4s;">
+                                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                                    </div>
+                                    
+                                    <!-- Password Field -->
+                                    <div class="col-12 animate-fade-in" style="animation-delay: 0.5s;">
+                                        <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" name="password" id="password" value="" required>
+                                    
+                                    </div>
+                                    
+                                    <!-- Terms Checkbox -->
+                                    <div class="col-12 animate-fade-in" style="animation-delay: 0.6s;">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required>
+                                            <label class="form-check-label text-secondary" for="iAgree">
+                                                I agree to the <a href="#!" class="link-primary text-decoration-none link-hover">terms and conditions</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Submit Button -->
+                                    <div class="col-12 animate-fade-in" style="animation-delay: 0.7s;">
+                                        <div class="d-grid mt-4">
+                                            <button class="btn btn-register btn-primary btn-lg" type="submit">
+                                                <a href="/index.html" class="text-white text-decoration-none">Create Account</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <!-- Divider -->
+                            <div class="row animate-fade-in" style="animation-delay: 0.8s;">
+                                <div class="col-12">
+                                    <hr class="mt-5 mb-4 border-secondary-subtle">
+                                    <p class="m-0 text-secondary text-center">Already have an account? 
+                                        <a href="/Signin.html" class="link-primary text-decoration-none link-hover">Sign in</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Login -->
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="social-btn btn btn-outline-danger">
+                                    <i class="bi bi-google"></i>
+                                </a>
+                                <a href="#" class="social-btn btn btn-outline-primary">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="social-btn btn btn-outline-dark">
+                                    <i class="bi bi-apple"></i>
+                                </a>
+                            </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS for animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation class to elements when they come into view
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            
+            animateElements.forEach((element, index) => {
+                // Add delay based on element position
+                element.style.animationDelay = `${0.2 + (index * 0.1)}s`;
+                
+                // Make element visible to trigger animation
+                setTimeout(() => {
+                    element.style.opacity = 1;
+                }, 100);
+            });
+            
+            // Add hover effect to registration card
+            const regCard = document.querySelector('.registration-card');
+            if(regCard) {
+                regCard.addEventListener('mouseenter', () => {
+                    regCard.style.transform = 'translateY(-5px)';
+                    regCard.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.12)';
+                });
+                
+                regCard.addEventListener('mouseleave', () => {
+                    regCard.style.transform = 'translateY(0)';
+                    regCard.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.08)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

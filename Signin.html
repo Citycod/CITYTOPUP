@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityTopUp - Sign In</title>
+    <meta name="description" content="Sign in to your CityTopUp account for instant airtime, data, bill payments and airtime to cash conversion">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --dark-color: #1f2937;
+            --light-color: #f9fafb;
+            --text-color: #374151;
+            --text-light: #6b7280;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .auth-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.5), rgba(30, 64, 175, 0.5)),
+                url('https://via.placeholder.com/1600x1200?text=CityTopUp+Background') no-repeat left left;
+    background-attachment: fixed;
+}
+
+.auth-welcome {
+    background: url(/view-happy-3d-man-using-tablet.jpg);
+    background-size: cover;
+    border-radius: 12px;
+    height: 48.6rem;
+}
+
+.auth-welcome::after{
+  transform: scale(1.05);
+}
+
+        .auth-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .auth-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .auth-logo {
+            height: 60px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .auth-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.15);
+        }
+        
+        .btn-signin {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-signin:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .welcome-text {
+            position: relative;
+            animation: fadeInLeft 0.8s ease;
+        }
+        
+        .auth-form {
+            animation: fadeInRight 0.8s ease;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating-img {
+            animation: floating 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Auth Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <!-- Welcome Section (Left) -->
+                <div class="col-lg-6 d-none d-lg-block animate__animated animate__fadeInLeft">
+                  <div class="auth-welcome text-center p-5">
+                    <a class="navbar-brand" href="#">
+                     
+                  </a>
+                        
+                    </div>
+                </div>
+                
+                <!-- Auth Form (Right) -->
+                <div class="col-lg-5 animate__animated animate__fadeInRight">
+                    <div class="auth-card card p-4 p-md-5">
+                        <div class="auth-header">
+                            <h3 class="fw-bold">Sign In</h3>
+                            <p class="lead mb-4">Sign in to access your CityTopUp account and manage your transactions.</p>
+                            <p class="text-muted">Don't have an account? <a href="/signup.html" class="text-decoration-none fw-semibold">Sign up</a></p>
+                        </div>
+                        
+                        <form class="auth-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email or Phone</label>
+                                <input type="text" class="form-control" id="email" placeholder="Enter your email or phone" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                <div class="text-end mt-2">
+                                    <a href="/forgotpass.html" class="text-decoration-none small">Forgot password?</a>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="remember">
+                                    <label class="form-check-label" for="remember">Remember me</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-signin btn-primary w-100 mb-3">Sign In</button>
+                            
+                            <div class="text-center my-4 position-relative">
+                                <span class="bg-white px-3 position-relative">or continue with</span>
+                                <hr class="position-absolute top-50 start-0 end-0">
+                            </div>
+                            
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="#" class="social-btn btn btn-outline-danger">
+                                    <i class="bi bi-google"></i>
+                                </a>
+                                <a href="#" class="social-btn btn btn-outline-primary">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="social-btn btn btn-outline-dark">
+                                    <i class="bi bi-apple"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS for animations -->
+    <script>
+        // Add animation class on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const authForm = document.querySelector('.auth-form');
+            authForm.classList.add('animate__animated', 'animate__fadeInRight');
+            
+            const welcomeSection = document.querySelector('.welcome-text');
+            if(welcomeSection) {
+                welcomeSection.classList.add('animate__animated', 'animate__fadeInLeft');
+            }
+        });
+    </script>
+</body>
+</html>
